@@ -26,7 +26,7 @@ export class HomePage {
   async obterOsPokemons(){
 
     const loading = await this.loadingCtrl.create({
-      message: 'Please wait...'
+      message: 'Aguarde...'
     });
 
     for(let i = 1; i < 140; i += 1){
@@ -57,7 +57,7 @@ export class HomePage {
       } else {
         this.lendoMaisDados(this.obterTamanho());
       }
-    }, 500);
+    }, 250);
   }
 
   obterTamanho(): number{
@@ -68,10 +68,14 @@ export class HomePage {
 
   async lendoMaisDados(tamanho: number) {
     for(let pokemon = tamanho + 1; pokemon < tamanho + 20; pokemon++){
-      const teste = this.pokemons$.subscribe(value => {
-        this.redux.addSearch(value.filter((item, index) => 
-          index < pokemon
+      const teste = this.pokemons$.subscribe(
+        (value) => {
+        this.redux.addSearch(value.filter(
+          (item, index) => 
+          index < pokemon,
         ));
+      }, (error) => {
+        alert(error);
       });
 
       if(!teste){
