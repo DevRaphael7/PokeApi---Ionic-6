@@ -1,0 +1,15 @@
+<div class="poke-info">
+  <ion-button class="fecharModal-btn" color="none" (click)="fecharModal()"><ion-icon name="arrow-back"></ion-icon></ion-button>
+  <div class="center">
+    <img [src]="getImg">
+  </div>
+  <hr>
+  <h3>{{getNome}}</h3>
+  <h4 class="txtType">Atributos</h4>
+  <div id="atributos">
+    <p>Altura: {{getAltura}}</p>
+    <p>Largura: {{getLargura}}</p>
+    <p>Tipo: {{getTipo}}</p>
+    <p>Abilidades: {{getAbilidades.join(", ")}}</p>
+  </div>
+</div>

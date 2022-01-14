@@ -1,0 +1,29 @@
+.content{
+  animation: corDeFundo 10s infinite;
+  min-height: 100%;
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: center;
+  position: relative;
+}
+
+@keyframes corDeFundo{
+  0%{
+    background-color: #ff420f;
+  }
+  25%{
+    background-color: #fca40f;
+  }
+  50%{
+    background-color: #4bf304;
+  }
+  75%{
+    background-color: #4bfe88;
+  }
+  100%{
+    background-color: #ff420f;
+  }
+}

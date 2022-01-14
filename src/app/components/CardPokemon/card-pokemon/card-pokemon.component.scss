@@ -1,0 +1,36 @@
+.card-curso{
+    min-width: 120px;
+    max-width: 200px;
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    height: 200px;
+    box-shadow: 5px 5px 8px black;
+    background-color: rgba(0, 0, 0, 0.6);
+
+    img{
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 1px solid #000;
+        background-color: #fff;
+    }
+
+    ion-card-subtitle{
+        margin-top: 5px;
+        font-size: 10px;
+        color: #fff;
+    }
+
+    ion-card-title{
+        font-size: 18px;
+        color: #fff;
+    }
+
+    p{
+        font-size: 10px;
+        font-weight: bold;
+        color: #fff;
+    }
+}

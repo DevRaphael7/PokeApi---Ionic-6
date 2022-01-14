@@ -1,0 +1,34 @@
+.fecharModal-btn{
+    --border-color: none;
+    color: #000;
+    border: none;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+}
+
+.poke-info{
+    padding: 10px;
+    
+    img{
+        margin-top: 10px;
+        width: 200px;
+        height: 200px;
+        object-fit: fill;
+    }
+
+    h3{
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .txtType{
+        font-weight: bold;
+    }
+
+    #atributos{
+        padding: 5px;
+    }
+}

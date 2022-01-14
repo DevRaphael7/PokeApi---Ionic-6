@@ -1,0 +1,49 @@
+#pokeSymbol{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+  
+    img{
+      width: 100px;
+      height: 120px;
+      margin: 10px;
+      animation-name: symbolPoke;
+      animation-duration: 12s;
+      animation-iteration-count: infinite;
+      animation-fill-mode: linear;
+      align-items: center;
+      opacity: 0;
+    }
+  
+    img:nth-child(1){
+      animation-delay: 2s;
+    }
+  
+    img:nth-child(2){
+      animation-delay: 3s;
+    }
+  
+    img:nth-child(3){
+      animation-delay: 4s;
+    }
+  
+    img:nth-child(4){
+      animation-delay: 5s;
+    }
+}
+
+@keyframes symbolPoke{
+    0%{
+      opacity: 0;
+      transform: translateY(0);
+    }
+    50%{
+      opacity: 1;
+      transform: translateY(-50%);
+    }
+    100%{
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+}

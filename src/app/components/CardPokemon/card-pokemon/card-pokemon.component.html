@@ -1,0 +1,9 @@
+<ion-card class="card-curso" (click)="presentModal(txtNome)">
+  <ion-card-header>
+    <p>{{pokeId}}</p>
+    <img [src]="txtImg">
+    <ion-card-subtitle>Altura: {{txtAltura}}</ion-card-subtitle>
+    <ion-card-title>{{txtNome}}</ion-card-title>
+    <p>{{txtTipo.join(", ")}}</p>
+  </ion-card-header>
+</ion-card>

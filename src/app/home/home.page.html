@@ -1,0 +1,23 @@
+<app-header title="PokeApi"></app-header>
+
+<ion-content [fullscreen]="true">
+  <div class="content">
+    <app-logo></app-logo>
+    <app-search-bar></app-search-bar>
+    <ion-grid class="grid-container">
+      <!-- <app-symbol-pokemon-animation></app-symbol-pokemon-animation> -->
+      <ion-row>
+        <ion-col *ngFor="let item of pokemonsFiltro$ | async">
+          <app-card-pokemon [txtNome]="item.nome" [txtAltura]="item.altura" [txtImg]="item.img" [txtTipo]="item.tipo" [txtLargura]="item.largura" [txtAbilidades]="item.abilidades" [pokeId]="item.id"></app-card-pokemon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+      <ion-infinite-scroll-content
+        loadingSpinner="bubbles"
+        loadingText="Loading more data...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+  </div>
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "pokeApiRedux",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
