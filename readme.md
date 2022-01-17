@@ -2,6 +2,7 @@
 
 ## Bibliotecas usadas
 1) Ngrx (Redux para Angular)
+2) HttpClient
 
 ## Screenshots
 
