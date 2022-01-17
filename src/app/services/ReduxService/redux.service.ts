@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { LoadingController } from '@ionic/angular';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { AppState } from 'src/app/redux/models/AppState.model';
@@ -12,7 +13,7 @@ import { getPokeState } from 'src/app/redux/reducers/pokemon.reducer';
 })
 export class ReduxService {
 
-  constructor(private store: Store<AppState>) { }
+  constructor(private store: Store<AppState>, private loading: LoadingController) { }
 
   getDataRedux(): Observable<DataApi[]> {
     return this.store.select(getPokeState);
