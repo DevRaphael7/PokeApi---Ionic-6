@@ -22,7 +22,6 @@ export class SearchBarComponent implements OnInit {
   }
 
   obterTamanho(): number{
-
     let tamanho = 0;
 
     this.redux.getSearch().subscribe(value => tamanho = value.length);

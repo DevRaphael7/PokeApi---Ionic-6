@@ -35,10 +35,11 @@ export class HomePage {
         (value) => {
           this.redux.addPokemon(value);
           return true;
-      },(error) => {
-        alert('Error: ' + error);
-        return false;
-      });
+        },(error) => {
+          alert('Error: ' + error);
+          return false;
+        }
+      );
 
       if(!teste){
         break;

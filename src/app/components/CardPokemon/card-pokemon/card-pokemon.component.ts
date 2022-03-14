@@ -10,20 +10,19 @@ import { DataApi } from 'src/app/redux/models/data.model';
 })
 export class CardPokemonComponent implements OnInit {
 
-  @Input() txtImg: string;
-  @Input() txtAltura: string;
-  @Input() txtNome: string;
-  @Input() txtTipo: string[];
-  @Input() txtLargura: string;
-  @Input() txtAbilidades: string[];
-  @Input() pokeId: number;
+  @Input() txtImg: string = "";
+  @Input() txtAltura: string = "";
+  @Input() txtNome: string = "";
+  @Input() txtTipo: string[] = [""];
+  @Input() txtLargura: string = "";
+  @Input() txtAbilidades: string[] = [""];
+  @Input() pokeId: number = 0;
 
   constructor(private modalController: ModalController) { }
 
   ngOnInit() {}
 
   async presentModal(pokeName: string) {
-
     const data: DataApi = {
       altura: Number(this.txtAltura),
       img: this.txtImg,
@@ -44,5 +43,4 @@ export class CardPokemonComponent implements OnInit {
     });
     return await modal.present();
   }
-
 }
