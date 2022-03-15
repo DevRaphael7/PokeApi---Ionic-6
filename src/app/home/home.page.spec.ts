@@ -42,10 +42,10 @@ describe('HomePage', () => {
   });
 
   it('Verificar se está buscando os pokemons', async () => {
-    await component.obterOsPokemons()
+    component.obterOsPokemons()
     reduxService.getDataRedux().pipe().subscribe(value => {
-      expect(value.length).toEqual(140)
-    })
+        expect(value.length).toEqual(10);
+    });
   });
 
 });
